@@ -7,6 +7,7 @@ Spree::Variant.class_eval do
 
   # calculates the price based on quantity
   def volume_price(quantity)
+    quantity = quantity.to_i
     if self.volume_prices.count == 0
       return self.price
     else
